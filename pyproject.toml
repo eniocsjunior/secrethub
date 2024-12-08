@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "secrethub"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+cryptography = "^44.0.0"
+argon2-cffi = "^23.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest-cov = "^6.0.0"
+taskipy = "^1.14.1"
+faker = "^33.1.0"
+
+[tool.taskipy.tasks]
+test = { cmd = "pytest --verbose --showlocals --cov=secrethub --color=yes --code-highlight=yes", help = "Run Pytest."}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
