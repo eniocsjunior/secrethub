@@ -6,7 +6,7 @@ Creation and verification of cryptographic keys.
 To instantiate a Secret class you must first have a key:
 ```python
 >>> from secrethub import Secret
->>> new_key = Secret.new
+>>> new_key = Secret.new()
 >>> new_secret
 'UEGVN46SwIOyQCneO-sudqDRlqbM3Td8ygozeoWqY2A='
 >>> secret = Secret(key=new_key)

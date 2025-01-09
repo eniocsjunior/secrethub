@@ -130,7 +130,6 @@ class Secret:
         )
 
     @classmethod
-    @property
     def new(
         self: Self
     ) -> str:

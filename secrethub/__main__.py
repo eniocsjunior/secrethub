@@ -35,7 +35,7 @@ verify [hash] [password]
         if gen_new_key == '' or \
             gen_new_key.upper() == 'y' or \
                 gen_new_key.lower() == 'yes':
-            new_key = Secret.new
+            new_key = Secret.new()
             print(
                 color['success'] + f'New key: { new_key }' + reset
             )
@@ -47,7 +47,7 @@ verify [hash] [password]
     if len(argv) > 1:
         match argv[1]:
             case 'new':
-                print(Secret.new)
+                print(Secret.new())
             case 'encrypt':
                 try:
                     print(

@@ -4,7 +4,7 @@ from secrethub import Secret
 
 @fixture(scope='session')
 def secret() -> Secret:
-    return Secret(key=Secret.new)
+    return Secret(key=Secret.new())
 
 @fixture
 def message() -> str:
